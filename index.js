@@ -4,7 +4,7 @@ var fetcher = require('./bin/fetcher');
 var recordParser = function (dmarcRecord) {
     return new Promise((resolve, reject) => {
         var result = parser(dmarcRecord);
-        if (result.messages && result.messages.length) return reject(messages);
+        if (result.messages && result.messages.length) return reject(result.messages);
         resolve(result.tags);
     });
 }

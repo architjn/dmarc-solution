@@ -16,9 +16,21 @@ const validators = {
     fo: {
         // termPattern: /^fo$/,
         description: 'The FO tag pertains to how forensic reports are created and presented to DMARC users.',
-        validate(term, value) {
-            if (!/^([01ds])$/i.test(value)) {
-                throw new Error(`Invalid value for '${term}': '${value}', must be one of: 0, 1, d, s`);
+        validate(term, originalValue) {
+            var value = originalValue.split(':');
+            if(value.length <= 4){
+                if(!/^([01ds])$/i.test(value[0])){
+                    throw new Error(`Invalid value for '${term}': '${originalValue}', must be colon seprated with: 0, 1, d, s`);
+                }
+                if(value.length > 1 && !/^([01ds])$/i.test(value[1])){
+                    throw new Error(`Invalid value for '${term}': '${originalValue}', must be colon seprated with: 0, 1, d, s`);
+                }
+                if(value.length > 2 && !/^([01ds])$/i.test(value[2])){
+                    throw new Error(`Invalid value for '${term}': '${originalValue}', must be colon seprated with: 0, 1, d, s`);
+                }
+                if(value.length > 3 && !/^([01ds])$/i.test(value[3])){
+                    throw new Error(`Invalid value for '${term}': '${originalValue}', must be colon seprated with: 0, 1, d, s`);
+                }
             }
         }
     },
