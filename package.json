@@ -11,5 +11,8 @@
     "url": "git+https://github.com/architjn/dmarc-solution.git"
   },
   "author": "Archit Jain",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "email-validator": "^2.0.4"
+  }
 }
