@@ -1,5 +1,5 @@
-var parser = require('./parser');
-var fetcher = require('./fetcher');
+var parser = require('./bin/parser');
+var fetcher = require('./bin/fetcher');
 
 var recordParser = function (dmarcRecord) {
     return new Promise((resolve, reject) => {
