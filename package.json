@@ -1,7 +1,7 @@
 {
   "name": "dmarc-solution",
   "version": "1.0.2",
-  "description": "One stop solution for all DMARC Problems. This package includes fetching of dmarc record, parsing the provided/fetched record, validating of dmarc record, generating a new dmarc record",
+  "description": "One stop solution for all DMARC Problems. This package includes fetching of dmarc record, parsing the provided/fetched record, validation of DMARC record, generating a new DMARC record",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
