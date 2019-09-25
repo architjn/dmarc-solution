@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/architjn/dmarc-solution.git"
   },
+  "keywords": ["dmarc", "dkim", "email", "mail", "spf", "record", "parser", "txt", "dns", "generator", "report"],
   "author": "Archit Jain",
   "license": "ISC",
   "dependencies": {
