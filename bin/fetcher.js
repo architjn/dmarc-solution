@@ -5,7 +5,7 @@ var fetch = function (domainName){
         dns.resolveTxt('_dmarc.' + domainName, (err, records) => {
             if(err){
                 if(err.message && typeof err.message == 'string' && err.message.startsWith('queryTxt ENOTFOUND'))
-                    return reject('DMARC Record not available');
+                    return reject(new Error('DMARC Record not available'));
                 return reject(err.message);
             } 
             var record = null;
@@ -19,7 +19,7 @@ var fetch = function (domainName){
                 if(record != null)
                     break;
             }
-            if(record == null) return reject('DMARC Record not available');
+            if(record == null) return reject(new Error('DMARC Record not available'));
             return resolve(record);
         });
     })

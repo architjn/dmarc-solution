@@ -1,5 +1,6 @@
 var parser = require('./bin/parser');
 var fetcher = require('./bin/fetcher');
+var generator = require('./bin/generator');
 
 var recordParser = function (dmarcRecord) {
     return new Promise((resolve, reject) => {
@@ -24,5 +25,16 @@ var recordFetcher = function (domainName) {
     })
 }
 
+var recordGenerator = function (values) {
+    return new Promise((resolve, reject) => {
+        try {
+            resolve(generator(values))
+        } catch (err) {
+            reject(err.message)
+        }
+    })
+}
+
 exports.parse = recordParser;
 exports.fetch = recordFetcher;
+exports.generate = recordGenerator;
