@@ -1,0 +1,15 @@
+{
+  "name": "dmarc-solution",
+  "version": "1.0.1",
+  "description": "All DMARC tasks in just one package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/architjn/dmarc-solution.git"
+  },
+  "author": "Archit Jain",
+  "license": "ISC"
+}
