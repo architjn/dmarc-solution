@@ -1,6 +1,6 @@
 {
   "name": "dmarc-solution",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "All DMARC tasks in just one package",
   "main": "index.js",
   "scripts": {
