@@ -1,19 +1,40 @@
 {
-  "name": "dmarc-solution",
-  "version": "1.0.2",
-  "description": "One stop solution for all DMARC Problems. This package includes fetching of dmarc record, parsing the provided/fetched record, validation of DMARC record, generating a new DMARC record",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/architjn/dmarc-solution.git"
-  },
-  "keywords": ["dmarc", "dkim", "email", "mail", "spf", "record", "parser", "txt", "dns", "generator", "report"],
-  "author": "Archit Jain",
-  "license": "ISC",
-  "dependencies": {
-    "email-validator": "^2.0.4"
-  }
+	"name": "dmarc-solution",
+	"version": "1.0.2",
+	"description": "One stop solution for all DMARC Problems. This package includes fetching of dmarc record, parsing the provided/fetched record, validation of DMARC record, generating a new DMARC record",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/architjn/dmarc-solution.git"
+	},
+	"keywords": [
+		"dmarc",
+		"dkim",
+		"email",
+		"mail",
+		"spf",
+		"record",
+		"parser",
+		"txt",
+		"dns",
+		"generator",
+		"report"
+	],
+	"author": "Archit Jain",
+	"license": "ISC",
+	"maintainers": [
+		{
+			"name": "Archit Jain",
+			"email": "architjn93@gmail.com"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/architjn/dmarc-solution/issues"
+	},
+	"dependencies": {
+		"email-validator": "^2.0.4"
+	}
 }
