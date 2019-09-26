@@ -1,6 +1,6 @@
 {
 	"name": "dmarc-solution",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "One stop solution for all DMARC Problems. This package includes fetching of dmarc record, parsing the provided/fetched record, validation of DMARC record, generating a new DMARC record",
 	"main": "index.js",
 	"scripts": {
