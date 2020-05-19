@@ -16,6 +16,7 @@ var fetch = function (domainName) {
 						break;
 					}
 				}
+				if (record && records[i].length > 0) record = records[i].join("")
 				if (record != null)
 					break;
 			}
