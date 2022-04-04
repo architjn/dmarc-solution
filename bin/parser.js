@@ -1,23 +1,21 @@
-'use strict';
-var validators = require('./validator');
+"use strict";
+var validators = require("./validator");
 
 function parse(policy) {
 	// Steps
 	// 1. Split policy string on semicolons into term pairs
 	// 2. Process and validate each term pair
 
-	let terms = policy.split(/;/)
-		.map(t => t.trim()) // Trim surrounding whitespace
-		.filter(x => x !== ''); // Ignore empty tags
+	let terms = policy
+		.split(/;/)
+		.map((t) => t.trim()) // Trim surrounding whitespace
+		.filter((x) => x !== ""); // Ignore empty tags
 
-	let rules = terms.map(
-		x => x.split(/[=]/)
-			.map(p => p.trim())
-	);
+	let rules = terms.map((x) => x.split(/[=]/).map((p) => p.trim()));
 
 	let retval = {
 		tags: {},
-		messages: []
+		messages: [],
 	};
 
 	// Make sure `v` is the first tag
@@ -37,13 +35,13 @@ function parse(policy) {
 
 			// Term matches validaor
 			debugger;
-			let termRegex = new RegExp(`^${validatorTerm}$`, 'i');
+			let termRegex = new RegExp(`^${validatorTerm}$`, "i");
 			if (termRegex.test(term)) {
 				found = true;
 
 				let tag = {
 					// tag: term,
-					description: settings.description
+					description: settings.description,
 				};
 
 				if (settings.validate) {
@@ -51,8 +49,7 @@ function parse(policy) {
 						settings.validate.call(settings, term, value);
 						tag.value = value;
 						retval.tags[term] = tag;
-					}
-					catch (err) {
+					} catch (err) {
 						retval.messages.push(err.message);
 					}
 				}

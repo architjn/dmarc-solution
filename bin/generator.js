@@ -1,15 +1,15 @@
-var validators = require('./validator');
+var validators = require("./validator");
 
 var generate = function (values) {
 	var record = [];
 	if (values.v == undefined) {
-		throw new Error('DMARC Version is required tag');
+		throw new Error("DMARC Version is required tag");
 	}
-	validators.v.validate.call(validators.v, 'v', values.v);
-	record.push('v=' + values.v);
+	validators.v.validate.call(validators.v, "v", values.v);
+	record.push("v=" + values.v);
 	for (var i = 0; i < Object.keys(values).length; i++) {
 		var term = Object.keys(values)[i];
-		if (term === 'v') continue;
+		if (term === "v") continue;
 		if (validators[term]) {
 			let settings = validators[term];
 			var value = null;
@@ -20,7 +20,7 @@ var generate = function (values) {
 			record.push(term + "=" + value);
 		}
 	}
-	return record.join('; ');
-}
+	return record.join("; ");
+};
 
 module.exports = generate;
