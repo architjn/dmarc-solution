@@ -13,7 +13,7 @@ var recordFetcher = async function (domainName) {
 	let data = await recordParser(record);
 	return { record: record, tags: data };
 };
-
+  
 var recordGenerator = async function (values) {
 	return generator(values);
 };
